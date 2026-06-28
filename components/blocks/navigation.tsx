@@ -3,9 +3,9 @@ import { Badge } from "../ui/badge";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-0 w-full h-16 p-5 flex items-center justify-between">
+    <nav className="fixed top-0 w-full h-16 p-5 flex items-center justify-between z-999">
       <span className="flex-1 text-2xl font-semibold text-foreground">Mozarist</span>
-      <div className="flex-1 flex items-center justify-center gap-4 text-lg font-medium w-full">
+      <div className="relative flex-1 flex items-center justify-center gap-4 text-lg font-medium w-full mix-blend-difference">
         <a href="#" className="text-muted-foreground hover:text-foreground">Home</a>
         <a href="#" className="text-muted-foreground hover:text-foreground">Projects</a>
         <a href="#" className="text-muted-foreground hover:text-foreground">About me</a>

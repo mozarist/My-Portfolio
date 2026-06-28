@@ -22,6 +22,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@efferd": "https://efferd.com/r/{name}.json"
+    "@efferd": "https://efferd.com/r/{name}.json",
+    "@magicui": "https://magicui.design/r/{name}"
   }
 }
