@@ -18,7 +18,7 @@ type FooterLinkGroup = {
 export function StickyFooter() {
 	return (
 		<footer
-			className="relative h-(--footer-height) w-full border-t [--footer-height:100vh]"
+			className="relative h-(--footer-height) w-full border-t [--footer-height:75vh]"
 			style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
 		>
 			<div className="fixed bottom-0 h-(--footer-height) w-full">
@@ -34,7 +34,7 @@ export function StickyFooter() {
 					<div className="relative mx-auto flex size-full p-6 flex-col justify-between">
 						<div className="flex gap-8 pt-12">
 							<AnimatedContainer className="w-full space-y-4 flex-2">
-								<h2 className="text-2xl font-medium tracking-tight max-w-lg">Building projects that looks great on the outside and works just as well on the inside </h2>
+								<h2 className="text-2xl font-medium tracking-tight max-w-sm">Building projects that look great and work well</h2>
 								<p className="mt-8 text-muted-foreground text-2xl md:mt-0">
 									azzammozarist@gmail.com
 								</p>
@@ -81,7 +81,7 @@ export function StickyFooter() {
 									letterSpacing: "-0.07em",
 								}}
 							>
-								mozarist
+								Mozarist
 							</text>
 						</svg>
 					</div>
