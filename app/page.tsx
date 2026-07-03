@@ -1,4 +1,4 @@
-import AboutMeSection from "@/components/blocks/about";
+import IntroductionSection from "@/components/blocks/introduction";
 import { StickyFooter } from "@/components/blocks/footer";
 import Hero from "@/components/blocks/hero";
 import NavBar from "@/components/blocks/navigation";
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
 
       <main className="max-w-6xl p-5 mx-auto">
-        <AboutMeSection />
+        <IntroductionSection />
       </main>
 
       <StickyFooter />

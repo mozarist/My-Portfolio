@@ -18,11 +18,11 @@ export default function Hero() {
             <div className="flex flex-col justify-center items-center gap-5 z-1">
                 <div className="space-y-3">
                     <div className="flex items-center justify-center gap-3">
-                        <p className="text-2xl font-semibold">Hi, I'm Mozarist!</p>
+                        <p className="text-2xl font-semibold">Hi, I'm Azzam!</p>
                         <Avatar>
                             <AvatarImage
                                 src="https://github.com/mozarist.png"
-                                alt="@shadcn"
+                                alt="@mozarist"
                             />
                             <AvatarFallback>—</AvatarFallback>
                         </Avatar>
