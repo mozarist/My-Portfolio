@@ -2,6 +2,7 @@ import IntroductionSection from "@/components/blocks/introduction";
 import { StickyFooter } from "@/components/blocks/footer";
 import Hero from "@/components/blocks/hero";
 import NavBar from "@/components/blocks/navigation";
+import SelectedWorksSection from "@/components/blocks/works";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
 
       <Hero />
 
-      <main className="max-w-6xl p-5 mx-auto">
+      <main className="max-w-6xl flex flex-col gap-24 p-5 mx-auto">
         <IntroductionSection />
+        <SelectedWorksSection />
       </main>
 
       <StickyFooter />

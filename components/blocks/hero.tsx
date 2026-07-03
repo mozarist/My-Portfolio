@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { InteractiveGridPattern } from "../ui/interactive-grid-pattern";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -33,8 +34,12 @@ export default function Hero() {
                     </p>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                    <Button size={"lg"}>View My Projects <ArrowUpRight /></Button>
-                    <Button size={"lg"} variant={"outline"}>Get in Touch <ArrowUpRight /></Button>
+                    <Link href="#works">
+                        <Button size={"lg"}>View My Works <ArrowUpRight /></Button>
+                    </Link>
+                    <a href="#contact">
+                        <Button size={"lg"} variant={"outline"}>Get in Touch <ArrowUpRight /></Button>
+                    </a>
                 </div>
             </div>
         </div>
