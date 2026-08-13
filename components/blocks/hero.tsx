@@ -19,7 +19,7 @@ export default function Hero() {
             <div className="flex flex-col justify-center items-center gap-5 z-1">
                 <div className="space-y-3">
                     <div className="flex items-center justify-center gap-3">
-                        <p className="text-2xl font-semibold">Hi, I'm Azzam!</p>
+                        <p className="text-2xl font-medium">Hi, I'm Azzam!</p>
                         <Avatar>
                             <AvatarImage
                                 src="https://github.com/mozarist.png"
@@ -27,9 +27,9 @@ export default function Hero() {
                             />
                             <AvatarFallback>—</AvatarFallback>
                         </Avatar>
-                        <p className="text-2xl font-semibold">Full-Stack Developer Based in Indonesia.</p>
+                        <p className="text-2xl font-medium">Full-Stack Developer Based in Indonesia.</p>
                     </div>
-                    <p className="text-6xl text-center text-primary font-bold max-w-4xl">
+                    <p className="text-6xl text-center text-primary font-semibold max-w-3xl">
                         I build digital experiences that look good and work well.
                     </p>
                 </div>

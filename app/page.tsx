@@ -14,7 +14,6 @@ export default function Home() {
       <Hero />
 
       <main className="max-w-6xl flex flex-col gap-24 p-5 mx-auto">
-        <IntroductionSection />
         <SelectedWorksSection />
         <AboutSection />
         <ContactSection />
