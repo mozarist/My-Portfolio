@@ -17,21 +17,15 @@ export default function Hero() {
                 squares={[80, 80]}
             />
             <div className="flex flex-col justify-center items-center gap-5 z-1">
-                <div className="space-y-3">
-                    <div className="flex items-center justify-center gap-3">
-                        <p className="text-2xl font-medium">Hi, I'm Azzam!</p>
-                        <Avatar>
-                            <AvatarImage
-                                src="https://github.com/mozarist.png"
-                                alt="@mozarist"
-                            />
-                            <AvatarFallback>—</AvatarFallback>
-                        </Avatar>
-                        <p className="text-2xl font-medium">Full-Stack Developer Based in Indonesia.</p>
+                <div className="space-y-3 max-w-3xl">
+                    <div className="flex flex-wrap items-center justify-center">
+                        <p className="text-7xl text-center font-medium">
+                            Hi, I'm Mozarist.</p>
+                        <p className="text-7xl text-center font-medium">Full-Stack Developer <span className="text-primary/80">Based in Indonesia</span>.</p>
                     </div>
-                    <p className="text-6xl text-center text-primary font-semibold max-w-3xl">
+                    {/* <p className="text-7xl text-center text-primary font-semibold max-w-3xl">
                         I build digital experiences that look good and work well.
-                    </p>
+                    </p> */}
                 </div>
                 <div className="flex items-center justify-center gap-2">
                     <Link href="#works">
