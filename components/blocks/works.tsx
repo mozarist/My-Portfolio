@@ -60,10 +60,38 @@ const projects: Array<{
             categories: ["Web Development", "TanStack Start"]
         },
         {
+            title: "StudentVoice",
+            description: "A mobile and social media platform for students to make their voices heard and share school-related content.",
+            imageUrl: "/studentvoice-preview.png",
+            projectUrl: "https://github.com/mozarist/StudentVoice",
+            categories: ["Mobile Development", "React Native Expo"]
+        },
+        {
+            title: "CleanLab",
+            description: "CleanLab is a web & mobile-based laundry management system that facilitates the management of transactions, payments, and real-time laundry status tracking for both administrators and customers.",
+            imageUrl: "/cleanlab-preview1.png",
+            projectUrl: "https://github.com/mozarist/cleanlab",
+            categories: ["Web & Mobile Development", "Laravel", "React Native (Expo)"]
+        },
+        {
+            title: "Mora",
+            description: "A Smart School platform that helps schools manage student data and character development through a point system, behavior monitoring, and structured, data-driven reporting.",
+            imageUrl: "/mora-preview.png",
+            projectUrl: "https://github.com/mozarist/Mora",
+            categories: ["Web Development", "HTML", "CSS", "JavaScript"]
+        },
+        {
             title: "TeSate",
             description: "A mobile app for ordering satay that allows users to view the menu and place orders online.",
             imageUrl: "/tesate-preview1.png",
-            projectUrl: "https://github.com/mozarist/tesate",
-            categories: ["Mobile Development", "React Native"]
+            projectUrl: "https://github.com/mozarist/TeSate",
+            categories: ["Mobile Development", "React Native Expo"]
+        },
+        {
+            title: "ScholarSys",
+            description: "ScholarSys is a modern web application for managing student records within a school environment. The system is designed to make academic administration processes faster, more structured, and free from manual errors.",
+            imageUrl: "/scholarsys-preview1.png",
+            projectUrl: "https://github.com/mozarist/ScholarSys",
+            categories: ["Web Development", "Laravel"]
         },
     ]

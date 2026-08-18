@@ -34,7 +34,7 @@ export default function ProjectCard({ title, description, imageSrc, projectUrl, 
                         alt="Project Image"
                         width={500}
                         height={300}
-                        className="absolute inset-12 group-hover:top-8 group-hover:inset-0 w-full h-auto bg-background border-2 -rotate-4 group-hover:-rotate-0 group-hover:scale-95 rounded-xl transition-all duration-300 ease-in-out"
+                        className="absolute inset-12 w-full h-auto bg-background border-2 -rotate-4 group-hover:-rotate-2 group-hover:scale-105 rounded-xl transition-all duration-300 ease-in-out"
                     />
                     {badgeText && (
                         <Badge className='absolute top-3 left-3' variant={badgeVariant}>{badgeText}</Badge>
