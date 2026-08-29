@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { InteractiveGridPattern } from "../ui/interactive-grid-pattern";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Lanyard from "../Lanyard";
 
 export default function Hero() {
     return (
@@ -35,6 +36,10 @@ export default function Hero() {
                         <Button size={"lg"} variant={"outline"}>Get in Touch <ArrowUpRight /></Button>
                     </a>
                 </div>
+            </div>
+
+            <div className="absolute top-12">
+                <Lanyard />
             </div>
         </div>
     )
