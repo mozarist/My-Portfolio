@@ -5,52 +5,39 @@ import { FileText } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="flex flex-col justify-center items-center gap-3 scroll-mt-24">
+    <section id="about" className="relative flex flex-col justify-center items-center gap-3 scroll-mt-24">
       <div className="flex justify-between gap-6 w-full">
-        <div className="relative flex-1 flex flex-col gap-6 items-center justify-center">
-          <div className="w-96 h-fit bg-card p-4 pb-14 border overflow-hidden -rotate-4 shadow-sm">
-            <Image
-              src="/Azzam-Solo-Photoshoot.jpg"
-              alt="Mozarist's Picture"
-              width={500}
-              height={500}
-              preload={true}
-              className="w-full aspect-square object-center object-cover" />
-          </div>
+        <div className="hidden md:block flex-1 w-full h-fit bg-card rounded overflow-hidden">
+          <Image
+            src="/Azzam-Solo-Photoshoot.jpg"
+            alt="Mozarist's Picture"
+            width={500}
+            height={500}
+            preload={true}
+            className="w-full aspect-square object-center object-cover" />
         </div>
-        <div className="flex-1 flex flex-col gap-3">
-          <div className="flex-1 flex flex-col gap-3">
-            <div>
-              <p className="text-lg text-muted-foreground font-medium uppercase">
-                Full Name
-              </p>
-              <h4 className="text-xl font-semibold">
-                Ahmad Azzam Mozarist
-              </h4>
-            </div>
-            <div>
-              <p className="text-lg text-muted-foreground font-medium uppercase">
-                Location
-              </p>
-              <h4 className="text-xl font-semibold">
-                Bogor, Indonesia.
-              </h4>
-            </div>
-            <div>
-              <p className="text-lg text-muted-foreground font-medium uppercase">
-                Currently Pursuing
-              </p>
-              <h4 className="text-xl font-semibold">
-                Software Engineering at Pesat Informatics High School
-              </h4>
-            </div>
+
+        <div className="flex-6 flex flex-col gap-4">
+          <div className="space-y-1.5 text-lg font-medium leading-tight">
+            <p>
+            Hi, I'm Ahmad Azzam Mozarist, a passionate full stack web developer and UI/UX designer based in Indonesia. Currently studying Software Engineering at <a href="https://smkpesat.sch.id" className="underline hover:text-foreground/85">SMK Informatika Pesat</a>. I specialize in creating seamless websites that combine aesthetic appeal with functional excellence.
+          </p>
+
+          <p>
+            I build websites where design and development meet beautifully, focusing on the fine details from typography to motion that make digital experiences memorable. Outside of coding, I'm constantly refining my workflow to create products people love using.
+          </p>
+
+          <p>
+            I'm currently open to freelance opportunities and internships. Let's connect and build something great together!
+          </p>
           </div>
-          <div className="flex-1 flex flex-col gap-6">
-            <p className="text-xl text-muted-foreground text-justify font-medium leading-tight">
-              I enjoy building websites where design and development support each other. I care about the little details—from typography and spacing to motion—because they're often what make an experience memorable.
-              Outside of coding, I'm always exploring new ideas, refining my workflow, and learning better ways to build products that people genuinely enjoy using.
-            </p>
-          </div>
+
+          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm">
+              View My Resume
+              <FileText />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

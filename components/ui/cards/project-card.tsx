@@ -27,8 +27,8 @@ type ProjectCardProps = {
 export default function ProjectCard({ title, description, imageSrc, projectUrl, badgeText, badgeVariant, categories }: ProjectCardProps) {
     return (
         <Link href={projectUrl || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full">
-            <Card className="group w-full h-full pt-0" onClick={() => window.open(projectUrl, "_blank")}>
-                <div className="relative bg-muted w-full h-52 md:h-64 lg:h-72 xl:h-86 overflow-hidden">
+            <div className="group flex flex-col gap-3 w-full h-full pb-5 break-inside-avoid" onClick={() => window.open(projectUrl, "_blank")}>
+                <div className="relative bg-muted w-full aspect-5/3 rounded-2xl overflow-hidden">
                     <Image
                         src={imageSrc || ""}
                         alt="Project Image"
@@ -43,16 +43,11 @@ export default function ProjectCard({ title, description, imageSrc, projectUrl, 
 
                 <CardHeader>
                     <CardTitle className='text-xl'>{title || "Project Title"}</CardTitle>
-                    <CardDescription className="line-clamp-2">
+                    <CardDescription>
                         {description}
                     </CardDescription>
                 </CardHeader>
-                <CardFooter>
-                    <p className="text-sm text-muted-foreground font-mono">
-                        {categories?.join(" / ")}
-                    </p>
-                </CardFooter>
-            </Card>
+            </div>
         </Link>
     )
 }
