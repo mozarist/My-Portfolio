@@ -34,7 +34,7 @@ export default function Home() {
 
       <motion.main
         style={{ rotate: isDesktop ? rotate : 0 }}
-        className="relative top-[-140vh] sm:top-[-116vh] max-w-4xl 2xl:max-w-5xl flex flex-col gap-24 bg-card p-5 mx-auto border rounded z-10"
+        className="relative top-[-140vh] sm:top-[-116vh] max-w-4xl 2xl:max-w-5xl flex flex-col gap-10 bg-card p-5 mx-auto border rounded z-10"
       >
         <AboutSection />
         <SelectedWorksSection />
