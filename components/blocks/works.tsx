@@ -8,7 +8,7 @@ export default function SelectedWorksSection() {
         <section id="works" className="flex flex-col items-center justify-center gap-6 scroll-mt-24">
             <div className="space-y-2 w-full">
                 <div className="flex justify-between items-center gap-4">
-                    <div className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold overflow-hidden">
+                    <div className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading overflow-hidden">
                         Selected Works
                     </div>
 

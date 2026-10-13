@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         <footer
-          className="flex flex-col gap-10 bg-linear-to-t from-card via-card to-muted/50 p-5 border rounded-2xl"
+          className="flex flex-col gap-10 bg-linear-to-t from-card via-card to-muted p-5 border rounded-2xl"
         >
           <ContactSection />
         </footer>

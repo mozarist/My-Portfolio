@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { Moon, Sun } from 'lucide-react';
+import { Circle, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useCallback, useEffect, useState } from 'react';
 import { Badge } from '../ui/badge';
@@ -60,10 +60,13 @@ export default function NavBar() {
           transition={{ duration: 0.1, ease: [0.2, 0, 0.2, 1] }}
           className="flex items-center justify-between bg-card/80 backdrop-blur-sm w-full h-full p-5"
         >
-          <div className="flex-1 flex items-center justify-start gap-2 text-lg font-medium">
-            <span className="font-semibold text-primary">Mozarist</span>
+          <div className="flex-1 flex items-center justify-start gap-2">
+            <span className="text-lg text-primary font-semibold">Mozarist</span>
 
-            <Badge variant="secondary">Available for freelance</Badge>
+            <Badge variant="secondary" className="gap-1.5">
+              <Circle className="text-success fill-success" />
+              Available for freelance
+            </Badge>
           </div>
 
           <Button

@@ -18,7 +18,7 @@ export default function Hero() {
                                 className="w-full aspect-square object-center object-cover" />
                         </div>
 
-                        <p className="text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl text-left sm:text-center font-medium text-balance w-full">
+                        <p className="text-5xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-left sm:text-center font-medium font-heading text-balance w-full">
                             I build seamless websites tailored for your needs.
                         </p>
 
