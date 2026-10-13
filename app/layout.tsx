@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from 'next-themes';
 import LenisProvider from "@/components/ui/lenisprovide";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -64,11 +65,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
-        <TooltipProvider>
-          <LenisProvider>
-            {children}
-          </LenisProvider>
-        </TooltipProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <TooltipProvider>
+            <LenisProvider>
+              {children}
+            </LenisProvider>
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
