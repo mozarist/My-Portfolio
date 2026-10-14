@@ -40,7 +40,7 @@ export default function NavBar() {
   const borderRadius = isPast || !isSM ? '0px' : '9999px';
   const top = isPast || !isSM ? '0px' : '16px';
   const height = isPast ? '64px' : '48px';
-  const maxWidth = isPast ? (is2Xl ? '64rem' : '56rem') : '48rem';
+  const maxWidth = isPast ? (is2Xl ? '64rem' : '56rem') : '36rem';
 
   const toggleTheme = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
@@ -52,7 +52,7 @@ export default function NavBar() {
         initial={false}
         animate={{ borderRadius, top, height, maxWidth }}
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-        className="fixed top-0 w-full mx-auto border z-999 overflow-hidden"
+        className="fixed top-0 w-full mx-auto border-b border-x z-999 overflow-hidden"
       >
         <motion.div
           initial={false}
@@ -61,7 +61,7 @@ export default function NavBar() {
           className="flex items-center justify-between bg-card/80 backdrop-blur-sm w-full h-full p-5"
         >
           <div className="flex-1 flex items-center justify-start gap-2">
-            <span className="text-lg text-primary font-semibold">Mozarist</span>
+            <span className="text-xl text-primary font-heading tracking-wide">Mozarist</span>
 
             <Badge variant="secondary" className="gap-1.5">
               <Circle className="text-success fill-success" />
