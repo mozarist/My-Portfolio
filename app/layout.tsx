@@ -5,10 +5,11 @@ import { ThemeProvider } from 'next-themes';
 import LenisProvider from "@/components/ui/lenisprovide";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import GradualBlur from "@/components/GradualBlur";
 
-const instrumentSerifHeading = Instrument_Serif({subsets:['latin'],weight:['400'],variable:'--font-heading'});
+const instrumentSerifHeading = Instrument_Serif({ subsets: ['latin'], weight: ['400'], variable: '--font-heading' });
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
+const figtree = Figtree({ subsets: ['latin'], variable: '--font-sans' });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +78,21 @@ export default function RootLayout({
             </LenisProvider>
           </TooltipProvider>
         </ThemeProvider>
+
+        <GradualBlur
+          position="bottom"
+          height="6rem"
+          strength={1}
+          layers={8}
+          curve="linear"
+          exponential
+          tint="var(--gradual-blur-tint)"
+          autoHide
+          target="page"
+          opacity={0.45}
+          saturation={1}
+          hoverIntensity={1}
+        />
       </body>
     </html>
   );
