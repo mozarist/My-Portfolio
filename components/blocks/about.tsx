@@ -67,7 +67,7 @@ export default function AboutSection() {
             </h2>
 
             <p>
-              I'm a passionate full stack web developer and UI/UX designer based in Indonesia. Currently studying Software Engineering at <a href="https://smkpesat.sch.id" className="underline hover:text-foreground/85">SMK Informatika Pesat</a>. I specialize in creating seamless websites that combine aesthetic appeal with functional excellence.
+              I'm a passionate full stack web developer and UI/UX designer based in Indonesia. Currently studying Software Engineering at <a href="https://smkpesat.sch.id" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground/85">SMK Informatika Pesat</a>. I specialize in creating seamless websites that combine aesthetic appeal with functional excellence.
             </p>
 
             <p>
@@ -101,8 +101,8 @@ export default function AboutSection() {
           </Marquee>
         </div>
 
-        <div className="from-card via-transparent to-transparent pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-        <div className="from-card via-transparent to-transparent pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+        <div className="from-background sm:from-card via-transparent to-transparent pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+        <div className="from-background sm:from-card via-transparent to-transparent pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
       </div>
     </section>
   );
@@ -127,7 +127,7 @@ const IconsCard = ({ name }: { name: string }) => {
       <TooltipTrigger asChild>
         <figure
           className={cn(
-            "relative flex w-14 aspect-square items-center justify-center cursor-pointer overflow-hidden rounded-lg grayscale-50 hover:grayscale-0 saturate-75 hover:saturate-100 transition-all duration-200"
+            "relative flex w-14 aspect-square items-center justify-center cursor-pointer overflow-hidden rounded-lg sm:grayscale-50 hover:grayscale-0 sm:saturate-75 hover:saturate-100 transition-all duration-200"
           )}
         >
           <img

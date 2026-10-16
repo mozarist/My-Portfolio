@@ -32,25 +32,29 @@ export default function Home() {
 
       <Hero />
 
-      <motion.main
-        style={{ rotate: isDesktop ? rotate : 0 }}
-        id="main-content"
-        className="relative top-[-140vh] sm:top-[-116vh] max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 bg-background mx-auto z-10"
-      >
-        <div className="flex flex-col gap-10 bg-card p-5 border rounded-2xl">
-          <AboutSection />
-        </div>
+      <div className="relative sm:h-screen"></div>
 
-        <div className="flex flex-col gap-10 bg-card p-5 border rounded-2xl">
-          <SelectedWorksSection />
-        </div>
-
-        <footer
-          className="flex flex-col gap-10 bg-linear-to-t from-card via-card to-muted p-5 border rounded-2xl"
+      <div className="sm:p-5 w-full">
+        <motion.main
+          style={{ rotate: isDesktop ? rotate : 0 }}
+          id="main-content"
+          className="relative sm:mt-[-16vh] mb-16 max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 rounded-2xl mx-auto z-10"
         >
-          <ContactSection />
-        </footer>
-      </motion.main>
+          <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
+            <AboutSection />
+          </div>
+
+          <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
+            <SelectedWorksSection />
+          </div>
+
+          <footer
+            className="flex flex-col gap-10 bg-linear-to-t from-card via-card to-muted p-5 border rounded-2xl"
+          >
+            <ContactSection />
+          </footer>
+        </motion.main>
+      </div>
 
     </div>
   );
