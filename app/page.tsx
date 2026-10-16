@@ -38,7 +38,7 @@ export default function Home() {
         <motion.main
           style={{ rotate: isDesktop ? rotate : 0 }}
           id="main-content"
-          className="relative sm:mt-[-16vh] mb-16 max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 rounded-2xl mx-auto z-10"
+          className="relative sm:mt-[-20vh] mb-5 max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 rounded-2xl mx-auto z-10"
         >
           <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
             <AboutSection />
