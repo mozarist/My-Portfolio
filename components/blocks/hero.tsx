@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="sticky top-0 w-screen min-h-[60vh] sm:min-h-screen p-5 flex flex-col justify-center items-center overflow-hidden z-0">
                 <div className="flex flex-col justify-center items-center gap-5 z-1">
                     <div className="space-y-5 max-w-4xl 2xl:max-w-5xl w-full">
-                        <div className="block md:hidden w-14 sm:w-16 h-fit bg-card rounded overflow-hidden">
+                        <div className="block sm:hidden w-14 sm:w-16 h-fit bg-card rounded overflow-hidden">
                             <Image
                                 src="/Azzam-Solo-Photoshoot.jpg"
                                 alt="Mozarist's Picture"

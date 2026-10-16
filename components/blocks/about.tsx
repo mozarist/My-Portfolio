@@ -49,7 +49,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative flex flex-col justify-center items-center gap-10 scroll-mt-24">
       <div className="flex justify-between gap-6 w-full">
-        <div className="hidden md:block flex-1 w-full h-fit bg-card rounded overflow-hidden">
+        <div className="hidden sm:block flex-1 w-full h-fit bg-card rounded overflow-hidden">
           <Image
             src="/Azzam-Solo-Photoshoot.jpg"
             alt="Mozarist's Picture"
