@@ -9,8 +9,12 @@ import SelectedWorksSection from "@/components/blocks/works";
 import ContactSection from "@/components/blocks/contact";
 import AboutSection from "@/components/blocks/about";
 import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowUp, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 export default function Home() {
+  const { resolvedTheme, setTheme } = useTheme();
   const { scrollYProgress } = useScroll();
   const [isDesktop, setIsDesktop] = useState(false);
   const rotate = useTransform(scrollYProgress, [0, 0.1], [0.5, 0]);
@@ -26,6 +30,10 @@ export default function Home() {
     return () => mediaQuery.removeEventListener('change', handleResize);
   }, []);
 
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <div className="relative w-full">
       <NavBar />
@@ -34,11 +42,11 @@ export default function Home() {
 
       <div className="relative sm:h-screen"></div>
 
-      <div className="sm:p-5 w-full">
+      <div className="sm:px-5 w-full">
         <motion.main
           style={{ rotate: isDesktop ? rotate : 0 }}
           id="main-content"
-          className="relative sm:mt-[-20vh] mb-5 max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 rounded-2xl mx-auto z-10"
+          className="relative sm:mt-[-18vh] mb-5 max-w-4xl 2xl:max-w-5xl flex flex-col gap-5 rounded-2xl mx-auto z-10"
         >
           <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
             <AboutSection />
@@ -49,13 +57,42 @@ export default function Home() {
           </div>
 
           <footer
-            className="flex flex-col gap-10 bg-linear-to-t from-card via-card to-muted p-5 border rounded-2xl"
+            className="relative flex flex-col bg-linear-to-t from-background sm:from-card via-background sm:via-card to-muted p-5 border-t sm:border sm:rounded-2xl"
           >
             <ContactSection />
           </footer>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 w-full">
+            <span className="text-sm">
+              &copy; {new Date().getFullYear()} Ahmad Azzam Mozarist. All rights reserved.
+            </span>
+
+            <div className="flex items-center gap-2">
+              <Button
+                variant="link"
+                size="xs"
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <Sun className="dark:hidden" />
+                <span className="dark:hidden">Light</span>
+                <Moon className="hidden dark:block" />
+                <span className="hidden dark:block">Dark</span>
+              </Button>
+
+              <Button
+                variant="link"
+                size="xs"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                Scroll to top <ArrowUp />
+              </Button>
+            </div>
+          </div>
         </motion.main>
       </div>
-
     </div>
   );
 }
