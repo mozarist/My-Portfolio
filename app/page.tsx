@@ -30,6 +30,35 @@ export default function Home() {
     return () => mediaQuery.removeEventListener('change', handleResize);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const target = event.target;
+      const isEditableTarget =
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.tagName === 'SELECT');
+
+      if (
+        event.key.toLowerCase() !== 'd' ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey ||
+        isEditableTarget
+      ) {
+        return;
+      }
+
+      setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [resolvedTheme, setTheme]);
+
   const toggleTheme = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
@@ -73,6 +102,7 @@ export default function Home() {
                 size="xs"
                 onClick={toggleTheme}
                 aria-label="Toggle theme"
+                aria-keyshortcuts="d"
                 className="text-muted-foreground hover:text-foreground"
               >
                 <Sun className="dark:hidden" />
@@ -87,7 +117,8 @@ export default function Home() {
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="text-muted-foreground hover:text-foreground"
               >
-                Scroll to top <ArrowUp />
+                <ArrowUp />
+                Back to top 
               </Button>
             </div>
           </div>
