@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowUp, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import AchievementSection from '@/components/blocks/achievements';
+import CertificateListSection from '@/components/blocks/certificates';
 
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -88,6 +89,10 @@ export default function Home() {
             <AchievementSection />
           </div>
 
+          <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
+            <CertificateListSection />
+          </div>
+
           <footer
             className="relative flex flex-col bg-linear-to-t from-background sm:from-card via-background sm:via-card to-muted p-5 border-t sm:border sm:rounded-2xl"
           >
@@ -121,7 +126,7 @@ export default function Home() {
                 className="text-muted-foreground hover:text-foreground"
               >
                 <ArrowUp />
-                Back to top 
+                Back to top
               </Button>
             </div>
           </div>
