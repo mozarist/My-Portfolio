@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function AwardSection() {
+export default function AchievementSection() {
     return (
-        <section id="awards" className="flex flex-col gap-6 scroll-mt-24">
-            <div className="flex flex-col">
+        <section id="achievements" className="flex flex-col gap-6 scroll-mt-24">
+            <div className="flex flex-col gap-1">
                 <h2 className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading">
-                    Awards
+                    Achievements
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                    Some of the awards I have received during my academic journey.
+                    These accomplishments reflect my dedication, hard work, and passion for excellence in my field.
                 </p>
             </div>
 

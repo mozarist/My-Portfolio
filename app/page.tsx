@@ -1,8 +1,6 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import IntroductionSection from "@/components/blocks/introduction";
-import { StickyFooter } from "@/components/blocks/footer";
 import Hero from "@/components/blocks/hero";
 import NavBar from "@/components/blocks/navigation";
 import SelectedWorksSection from "@/components/blocks/works";
@@ -12,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUp, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import AwardSection from '@/components/blocks/award';
+import AchievementSection from '@/components/blocks/achievements';
 
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -87,7 +85,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-10 sm:bg-card p-5 sm:border sm:rounded-2xl">
-            <AwardSection />
+            <AchievementSection />
           </div>
 
           <footer
