@@ -2,19 +2,16 @@ import React from 'react'
 
 export default function CertificateListSection() {
     return (
-        <section id="certificates" className="flex flex-col gap-6 scroll-mt-24">
+        <section id="certificates" className="flex flex-col gap-4 scroll-mt-24 pb-8 border-b border-dashed">
             <div className="flex flex-col">
                 <h2 className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading">
                     Certificates
                 </h2>
-                <p className="text-sm text-muted-foreground">
-                    A collection of professional certifications validating my technical expertise and skills.
-                </p>
             </div>
 
             <div className="flex flex-col divide-y divide-border">
                 <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pb-3">
-                    <div className="flex flex-col order-2 sm:order-1">
+                    <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             English Listening and Reading Official Score Certificate
                         </h3>
@@ -37,13 +34,13 @@ export default function CertificateListSection() {
                         </div>
                     </div>
 
-                    <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
+                    <div className="text-xl sm:text-3xl sm:text-right font-heading order-1 sm:order-2 sm:flex-2">
                         July 2026
                     </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
-                    <div className="flex flex-col order-2 sm:order-1">
+                    <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building a Full-Stack POS (Point Of Sale) and Laundry Management Project
                         </h3>
@@ -60,13 +57,13 @@ export default function CertificateListSection() {
                         </div>
                     </div>
 
-                    <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
+                    <div className="text-xl sm:text-3xl sm:text-right font-heading order-1 sm:order-2 sm:flex-2">
                         June 2026
                     </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
-                    <div className="flex flex-col order-2 sm:order-1">
+                    <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building a Web-Based Student Management System with Laravel Framework
                         </h3>
@@ -83,13 +80,13 @@ export default function CertificateListSection() {
                         </div>
                     </div>
 
-                    <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
+                    <div className="text-xl sm:text-3xl sm:text-right font-heading order-1 sm:order-2 sm:flex-2">
                         December 2025
                     </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
-                    <div className="flex flex-col order-2 sm:order-1">
+                    <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building SMK Informatika Pesat Student Council President Voting System with PHP and MySQL
                         </h3>
@@ -106,13 +103,13 @@ export default function CertificateListSection() {
                         </div>
                     </div>
 
-                    <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
+                    <div className="text-xl sm:text-3xl sm:text-right font-heading order-1 sm:order-2 sm:flex-2">
                         June 2025
                     </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pt-3">
-                    <div className="flex flex-col order-2 sm:order-1">
+                    <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Creating a Travel Landing Page with HTML, CSS, and JavaScript
                         </h3>
@@ -129,7 +126,7 @@ export default function CertificateListSection() {
                         </div>
                     </div>
 
-                    <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
+                    <div className="text-xl sm:text-3xl sm:text-right font-heading order-1 sm:order-2 sm:flex-2">
                         December 2024
                     </div>
                 </div>

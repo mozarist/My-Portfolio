@@ -27,26 +27,26 @@ type ProjectCardProps = {
 export default function ProjectCard({ title, description, imageSrc, projectUrl, badgeText, badgeVariant, categories }: ProjectCardProps) {
     return (
         <Link href={projectUrl || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full">
-            <div className="group flex flex-col gap-3 w-full h-full pb-5 break-inside-avoid" onClick={() => window.open(projectUrl, "_blank")}>
-                <div className="relative bg-muted w-full aspect-5/3 rounded-2xl overflow-hidden">
+            <div className="group grid md:grid-cols-2 gap-5 w-full h-full break-inside-avoid" onClick={() => window.open(projectUrl, "_blank")}>
+                <div className="relative bg-muted w-full aspect-5/3 rounded-xl overflow-hidden">
                     <Image
                         src={imageSrc || ""}
                         alt="Project Image"
                         width={500}
                         height={300}
-                        className="absolute inset-12 w-full h-auto bg-background border-2 -rotate-4 group-hover:-rotate-2 group-hover:scale-105 rounded-xl transition-all duration-300 ease-in-out"
+                        className="absolute inset-12 md:inset-8 w-full h-auto bg-background border-2 -rotate-4 group-hover:-rotate-2 group-hover:scale-105 rounded-xl transition-all duration-300 ease-in-out"
                     />
                     {badgeText && (
                         <Badge className='absolute top-3 left-3' variant={badgeVariant}>{badgeText}</Badge>
                     )}
                 </div>
 
-                <CardHeader>
-                    <CardTitle className='text-xl'>{title || "Project Title"}</CardTitle>
+                <div className="flex flex-col gap-1">
+                    <CardTitle className='text-xl h-fit'>{title || "Project Title"}</CardTitle>
                     <CardDescription>
                         {description}
                     </CardDescription>
-                </CardHeader>
+                </div>
             </div>
         </Link>
     )

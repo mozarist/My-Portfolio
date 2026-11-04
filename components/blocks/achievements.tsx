@@ -2,14 +2,11 @@ import React from 'react'
 
 export default function AchievementSection() {
     return (
-        <section id="achievements" className="flex flex-col gap-6 scroll-mt-24">
+        <section id="achievements" className="flex flex-col gap-4 scroll-mt-24 pb-8 border-b border-dashed">
             <div className="flex flex-col gap-1">
                 <h2 className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading">
                     Achievements
                 </h2>
-                <p className="text-sm text-muted-foreground">
-                    These accomplishments reflect my dedication, hard work, and passion for excellence in my field.
-                </p>
             </div>
 
             <div className="flex flex-col gap-3 divide-y divide-border">
@@ -32,7 +29,7 @@ export default function AchievementSection() {
                     </div>
 
                     <div className="span text-xl sm:text-3xl font-heading order-1 sm:order-2">
-                        Oktober 2026
+                        October 2026
                     </div>
                 </div>
 

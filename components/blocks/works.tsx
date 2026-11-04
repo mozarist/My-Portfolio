@@ -1,39 +1,25 @@
-import { FolderOpen } from "lucide-react";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import ProjectCard from "../ui/cards/project-card";
 
 export default function SelectedWorksSection() {
     return (
-        <section id="works" className="flex flex-col items-center justify-center gap-6 scroll-mt-24">
-            <div className="space-y-2 w-full">
-                <div className="flex justify-between items-center gap-4">
-                    <div className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading overflow-hidden">
-                        Selected Works
-                    </div>
+        <section id="works" className="flex flex-col gap-4 scroll-mt-24 pb-8 border-b border-dashed">
+            <div className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading overflow-hidden">
+                Selected Works
+            </div>
 
-                    <Link href="https://github.com/mozarist" target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" size="sm">
-                            View More of My Works
-                            <FolderOpen />
-                        </Button>
-                    </Link>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-2 w-full">
-                    {projects.map((project, index) => (
-                        <ProjectCard
-                            key={index}
-                            title={project.title}
-                            description={project.description}
-                            imageSrc={project.imageUrl}
-                            projectUrl={project.projectUrl}
-                            badgeText={project.badgeText}
-                            badgeVariant={project.badgeVariant}
-                            categories={project.categories}
-                        />
-                    ))}
-                </div>
+            <div className="grid gap-y-5 w-full">
+                {projects.map((project, index) => (
+                    <ProjectCard
+                        key={index}
+                        title={project.title}
+                        description={project.description}
+                        imageSrc={project.imageUrl}
+                        projectUrl={project.projectUrl}
+                        badgeText={project.badgeText}
+                        badgeVariant={project.badgeVariant}
+                        categories={project.categories}
+                    />
+                ))}
             </div>
         </section>
     )
@@ -87,17 +73,16 @@ const projects: Array<{
             categories: ["Web Development", "HTML", "CSS", "JavaScript"]
         },
         {
-            title: "TeSate",
-            description: "A mobile food ordering app streamlining online satay selection, customized orders, and checkout.",
-            imageUrl: "/tesate-preview1.png",
-            projectUrl: "https://github.com/mozarist/TeSate",
-            categories: ["Mobile Development", "React Native Expo"]
-        },
-        {
             title: "ScholarSys",
             description: "An academic administration platform engineered to digitize student record management and streamline school workflows.",
             imageUrl: "/scholarsys-preview1.png",
             projectUrl: "https://github.com/mozarist/ScholarSys",
             categories: ["Web Development", "Laravel"]
+        },
+        {
+            title: "View more on my GitHub",
+            description: "Explore a wider range of my projects and contributions on my GitHub profile.",
+            imageUrl: "/github-profile-repositories.png",
+            projectUrl: "https://github.com/mozarist/?tab=repositories"
         },
     ]
