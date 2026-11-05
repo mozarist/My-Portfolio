@@ -17,7 +17,7 @@ export default function ContactSection() {
                 </p>
             </div>
 
-            <div className="flex items-center justify-center gap-2 w-full">
+            <div className="flex flex-wrap items-center justify-center gap-2 w-full">
                 <Button size="lg" variant="outline" onClick={() => window.open("mailto:azzammozarist@gmail.com", "_blank")}>
                     <Mail /> azzammozarist@gmail.com
                 </Button>
