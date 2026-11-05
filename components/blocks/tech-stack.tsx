@@ -26,7 +26,6 @@ const iconLabels: Record<string, string> = {
     github: "GitHub",
     githubcopilot: "GitHub Copilot",
     opencode: "OpenCode",
-    nodejs: "Node.js",
     vite: "Vite",
     visualstudiocode: "VS Code",
     postman: "Postman",
@@ -56,7 +55,7 @@ const techCategories: TechCategory[] = [
     {
         title: "Backend & Database",
         description: "APIs, server-side logic, and dependable data storage.",
-        items: ["php", "laravel", "nodejs", "postgresql", "mysql", "sqlite", "supabase", "neon"],
+        items: ["php", "laravel", "postgresql", "mysql", "sqlite", "supabase", "neon"],
     },
     {
         title: "Mobile Development",
