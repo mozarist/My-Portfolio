@@ -13,6 +13,7 @@ import { useTheme } from 'next-themes';
 import AchievementSection from '@/components/blocks/achievements';
 import CertificateListSection from '@/components/blocks/certificates';
 import TechStackSection from '@/components/blocks/tech-stack';
+import GitHubContributionsSection from '@/components/blocks/contributions';
 
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -63,6 +64,8 @@ export default function Home() {
           className="relative sm:mt-[-16vh] mb-5 mx-auto p-5 sm:p-2 max-w-xl 2xl:max-w-2xl flex flex-col gap-8 rounded-2xl z-10"
         >
           <AboutSection />
+
+          <GitHubContributionsSection />
 
           <TechStackSection />
 
