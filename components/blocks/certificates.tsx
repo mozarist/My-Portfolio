@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CertificateListSection() {
     return (
-        <section id="certificates" className="flex flex-col gap-4 scroll-mt-24 pb-8 border-b border-dashed">
+        <section id="certificates" className="flex flex-col gap-4 scroll-mt-24 pb-8 border-b-2 border-dashed">
             <div className="flex flex-col">
                 <h2 className="text-4xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading">
                     Certificates

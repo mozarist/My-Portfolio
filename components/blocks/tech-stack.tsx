@@ -43,7 +43,7 @@ const iconLabels: Record<string, string> = {
 
 export default function TechStackSection() {
     return (
-        <section id="tech-stack" className="relative flex flex-col gap-4 scroll-mt-24 pb-8 border-b border-dashed">
+        <section id="tech-stack" className="relative flex flex-col gap-4 scroll-mt-24 pb-8 border-b-2 border-dashed">
 
             <div className="relative w-full rounded-xl overflow-hidden">
                 <div className="space-y-2">

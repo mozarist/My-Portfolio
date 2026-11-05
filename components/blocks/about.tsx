@@ -3,7 +3,7 @@ import { FileText } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative flex flex-col gap-5 scroll-mt-24 pb-8 border-b border-dashed">
+    <section id="about" className="relative flex flex-col gap-5 scroll-mt-24 pb-8 border-b-2 border-dashed">
       <div className="space-y-2 text-sm sm:text-base md:text-lg font-medium text-muted-foreground leading-tight">
         <h2 className="text-foreground font-semibold">
           Hi, I'm Ahmad Azzam Mozarist! 👋
