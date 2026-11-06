@@ -24,7 +24,7 @@ export default function ContactSection() {
                 <Button size="icon-lg" variant="outline" onClick={() => window.open("https://github.com/mozarist", "_blank")}>
                     <GithubIcon />
                 </Button>
-                <Button size="icon-lg" variant="outline" onClick={() => window.open("https://www.linkedin.com/in/azzam-mozarist-b83a82406/", "_blank")}>
+                <Button size="icon-lg" variant="outline" onClick={() => window.open("https://www.linkedin.com/in/ahmad-azzam-mozarist-b83a82406", "_blank")}>
                     <LinkedinIcon />
                 </Button>
                 <Button size="icon-lg" variant="outline" onClick={() => window.open("https://www.instagram.com/mozarist.dev", "_blank")}>
