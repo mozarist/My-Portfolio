@@ -73,6 +73,14 @@ const projects: Array<{
             categories: ["Web Development", "TanStack Start"]
         },
         {
+            title: "Perfu.me",
+            description: "An online perfume platform designed to help local Indonesian fragrance businesses to showcase their products and streamline customer ordering through digital experiences.",
+            imageUrl: "/perfu.me-hero.png",
+            projectUrl: "https://github.com/mozarist/perfu.me",
+            badgeVariant: "destructive",
+            categories: ["Web Development", "TanStack Start"]
+        },
+        {
             title: "CleanLab",
             description: "A cross-platform laundry management system featuring real-time tracking, seamless transactions, and automated order handling for admins and customers.",
             imageUrl: "/cleanlab-preview1.png",
