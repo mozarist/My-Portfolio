@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { GitHubCalendar } from "react-github-calendar";
+import {
+    ActivityCalendar,
+    type Activity,
+    type ColorScheme,
+} from "react-activity-calendar";
 import { useTheme } from "next-themes";
-
-const GITHUB_USERNAME = "mozarist";
-const CONTRIBUTIONS_API = `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=last`;
 
 const WEEKS_IN_YEAR = 53;
 const WEEKDAY_LABEL_WIDTH = 40;
@@ -23,8 +24,8 @@ const CALENDAR_THEME = {
 const numberFormatter = new Intl.NumberFormat("en-US");
 
 type ContributionsResponse = {
-    contributions?: Array<{ date: string; count: number; level: number }>;
-    total?: { lastYear?: number };
+    contributions: Activity[];
+    total: number;
 };
 
 function getCalendarMetrics(width: number) {
@@ -60,6 +61,7 @@ function formatTooltip(activity: { date: string; count: number }) {
 
 export default function GitHubContributionsSection() {
     const { resolvedTheme } = useTheme();
+    const [contributions, setContributions] = useState<Activity[]>([]);
     const [total, setTotal] = useState<number | null>(null);
     const [totalUnavailable, setTotalUnavailable] = useState(false);
     const [containerWidth, setContainerWidth] = useState(0);
@@ -80,24 +82,18 @@ export default function GitHubContributionsSection() {
     useEffect(() => {
         const controller = new AbortController();
 
-        async function loadTotal() {
+        async function loadContributions() {
             try {
-                const response = await fetch(CONTRIBUTIONS_API, { signal: controller.signal });
-                if (!response.ok) throw new Error("Failed to load contributions");
+                const response = await fetch("/api/github-contributions", {
+                    signal: controller.signal,
+                });
+                if (!response.ok) {
+                    throw new Error("Failed to load contributions");
+                }
 
                 const data = (await response.json()) as ContributionsResponse;
-                const fromApi = data.total?.lastYear;
-                const computed = data.contributions?.reduce(
-                    (sum, day) => sum + day.count,
-                    0,
-                );
-                const value = typeof fromApi === "number" ? fromApi : computed;
-
-                if (typeof value === "number") {
-                    setTotal(value);
-                } else {
-                    setTotalUnavailable(true);
-                }
+                setContributions(data.contributions);
+                setTotal(data.total);
             } catch {
                 if (!controller.signal.aborted) {
                     setTotalUnavailable(true);
@@ -105,12 +101,12 @@ export default function GitHubContributionsSection() {
             }
         }
 
-        void loadTotal();
+        void loadContributions();
         return () => controller.abort();
     }, []);
 
     const { blockSize, blockMargin } = getCalendarMetrics(containerWidth);
-    const colorScheme =
+    const colorScheme: ColorScheme | undefined =
         resolvedTheme === "dark" ? "dark" : resolvedTheme === "light" ? "light" : undefined;
 
     return (
@@ -175,9 +171,9 @@ export default function GitHubContributionsSection() {
             </div>
 
             <div ref={containerRef} className="w-full text-muted-foreground">
-                <GitHubCalendar
-                    username={GITHUB_USERNAME}
-                    year="last"
+                <ActivityCalendar
+                    data={contributions}
+                    loading={total === null && !totalUnavailable}
                     colorScheme={colorScheme}
                     theme={CALENDAR_THEME}
                     blockSize={blockSize}
@@ -188,7 +184,6 @@ export default function GitHubContributionsSection() {
                     showWeekdayLabels={["mon", "wed", "fri"]}
                     showColorLegend={false}
                     showTotalCount={false}
-                    errorMessage="Unable to load GitHub contributions."
                     tooltips={{
                         activity: {
                             text: formatTooltip,
