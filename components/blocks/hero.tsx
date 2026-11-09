@@ -28,7 +28,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <div className="relative sm:fixed top-0 w-screen h-[75vh] sm:h-screen sm:bg-linear-to-t from-muted/50 via-background to-background flex flex-col justify-center items-center overflow-hidden z-2">
+        <div className="relative sm:fixed top-0 w-screen h-[75vh] sm:h-screen bg-linear-to-b sm:bg-linear-to-t from-muted via-background to-background flex flex-col justify-center items-center overflow-hidden z-2">
             <motion.div
                 initial={false}
                 style={{ opacity }}
