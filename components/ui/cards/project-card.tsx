@@ -26,15 +26,15 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ title, description, imageSrc, projectUrl, badgeText, badgeVariant, categories }: ProjectCardProps) {
     return (
-        <Link href={projectUrl || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full">
-            <div className="group grid md:grid-cols-2 gap-5 w-full h-full break-inside-avoid" onClick={() => window.open(projectUrl, "_blank")}>
-                <div className="relative bg-muted w-full aspect-5/3 rounded-xl overflow-hidden">
+        <Link href={projectUrl || "#"} target="_blank" rel="noopener noreferrer" className="w-full h-full pb-8">
+            <div className="group grid gap-8 w-full h-full break-inside-avoid" onClick={() => window.open(projectUrl, "_blank")}>
+                <div className="relative bg-muted w-full h-fit aspect-4/3 p-8 sm:p-12 flex items-center justify-center rounded-xl border overflow-hidden">
                     <Image
                         src={imageSrc || ""}
                         alt="Project Image"
                         width={500}
                         height={300}
-                        className="absolute inset-12 md:inset-8 w-full h-auto bg-background border-2 -rotate-4 group-hover:-rotate-2 group-hover:scale-105 rounded-xl transition-all duration-300 ease-in-out"
+                        className="w-full h-3/4 object-top object-cover -rotate-2 group-hover:-rotate-1 group-hover:scale-102 rounded-lg md:rounded-xl shadow-xl transition-all duration-300 ease-in-out"
                     />
                     {badgeText && (
                         <Badge className='absolute top-3 left-3' variant={badgeVariant}>{badgeText}</Badge>

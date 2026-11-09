@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { GithubIcon } from "../icons/bytesize-github";
+import { Button } from "../ui/button";
 import ProjectCard from "../ui/cards/project-card";
 
 export default function SelectedWorksSection() {
@@ -7,7 +10,7 @@ export default function SelectedWorksSection() {
                 Selected Works
             </div>
 
-            <div className="grid gap-y-5 w-full">
+            <div className="grid gap-8 divide-y divide-border w-full">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={index}
@@ -20,6 +23,24 @@ export default function SelectedWorksSection() {
                         categories={project.categories}
                     />
                 ))}
+
+                <div className="relative group flex flex-col gap-4 rounded-xl overflow-hidden">
+                    <p className="text-base md:text-xl font-medium w-1/2 md:w-2/3 z-10">
+                        Explore a wider range of my projects and contributions on my GitHub profile.
+                    </p>
+
+                    <Button size="sm" onClick={() => window.open('https://github.com/mozarist/?tab=repositories', '_blank')} className="w-fit z-10">
+                        My GitHub Repositories
+                        <GithubIcon />
+                    </Button>
+
+                    <Image
+                        src="/CPT.png"
+                        alt=""
+                        width={500}
+                        height={300}
+                        className="absolute -bottom-4 sm:-bottom-8 right-0 w-42 h-fit grayscale-100 group-hover:grayscale-0 transition-all duration-300" />
+                </div>
             </div>
         </section>
     )
@@ -78,11 +99,5 @@ const projects: Array<{
             imageUrl: "/scholarsys-preview1.png",
             projectUrl: "https://github.com/mozarist/ScholarSys",
             categories: ["Web Development", "Laravel"]
-        },
-        {
-            title: "View more on my GitHub",
-            description: "Explore a wider range of my projects and contributions on my GitHub profile.",
-            imageUrl: "/github-profile-repositories.png",
-            projectUrl: "https://github.com/mozarist/?tab=repositories"
         },
     ]
