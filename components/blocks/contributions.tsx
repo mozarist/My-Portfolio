@@ -181,7 +181,6 @@ export default function GitHubContributionsSection() {
                     blockRadius={2}
                     fontSize={11}
                     showMonthLabels
-                    showWeekdayLabels={["mon", "wed", "fri"]}
                     showColorLegend={false}
                     showTotalCount={false}
                     tooltips={{
