@@ -10,7 +10,7 @@ export default function CertificateListSection() {
             </div>
 
             <div className="flex flex-col divide-y divide-border">
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pb-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 pb-3">
                     <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             English Listening and Reading Official Score Certificate
@@ -39,7 +39,7 @@ export default function CertificateListSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 py-3">
                     <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building a Full-Stack POS (Point Of Sale) and Laundry Management Project
@@ -62,7 +62,7 @@ export default function CertificateListSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 py-3">
                     <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building a Web-Based Student Management System with Laravel Framework
@@ -85,7 +85,7 @@ export default function CertificateListSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 py-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 py-3">
                     <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Building SMK Informatika Pesat Student Council President Voting System with PHP and MySQL
@@ -108,7 +108,7 @@ export default function CertificateListSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pt-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 pt-3">
                     <div className="flex flex-col order-2 sm:order-1 sm:flex-4">
                         <h3 className="text-base font-medium">
                             Creating a Travel Landing Page with HTML, CSS, and JavaScript

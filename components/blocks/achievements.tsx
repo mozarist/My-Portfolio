@@ -10,7 +10,7 @@ export default function AchievementSection() {
             </div>
 
             <div className="flex flex-col gap-3 divide-y divide-border">
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pb-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 pb-3">
                     <div className="flex flex-col order-2 sm:order-1">
                         <h3 className="text-base font-medium">
                             Silver Medalist of Level 5 English Competition
@@ -33,7 +33,7 @@ export default function AchievementSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2 pb-3">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2 pb-3">
                     <div className="flex flex-col order-2 sm:order-1">
                         <h3 className="text-base font-medium">
                             4th Place Level 5 English Competition
@@ -56,7 +56,7 @@ export default function AchievementSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-2">
                     <div className="flex flex-col order-2 sm:order-1">
                         <h3 className="text-base font-medium">
                             1st Place Winner of Web Design Competition
